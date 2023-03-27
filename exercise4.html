@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+	</head>
+	<style>
+		legend {background: white}
+		#name:hover {input: gray}
+	</style>
+	<body>
+		<h1> My Dream House </h1>
+		<form action="http://httpbin.org/post" method="POST">
+			<fieldset style="background: AliceBlue">
+				<legend>Location</legend>
+				<label>zipcode<input name="zipcode" type="text" size="8" pattern=".{3}"></label><br/>
+				<label>Address 1<input name="address1" type="text" size="50" pattern="[A-Za-z]{,20}" placeholder="Address longer than 20 characters, use the address 2"></label><br/>
+				<label>Address 2<textarea name="address2" rows="5" cols="20" pattern="[A-Za-z]"></textarea></label><br/>
+			</fieldset>
+			<fieldset style="background: LightPink">
+				<legend>Preference</legend>
+				<label>Painting Color<input name="color" type="color" value="#0000FF"></label><br/>
+				<label>Time you want to visit Open House<input name="timevisit" type="time" min="10:00" max="16:00"></label><br/>
+			</fieldset>
+			<fieldset style="background: SeaShell">
+				<legend>Contact me</legend>
+				<label id="name">Name<input name="name" type="text" pattern="[a-z].{4,}"></label><br/>
+				<label>Phone<input name="phone" type="text" pattern="[0-9].{7,}"></label><br/>
+			</fieldset>
+			<input type="reset" value="Reset">
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>
